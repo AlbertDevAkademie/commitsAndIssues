@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Commits & Issues</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Commit-Typen und ihre Bedeutung</h1>
+    <p>Hier eine Übersicht der verschiedenen Commit-Typen und deren Verwendung:</p>
+    Info: <a href="https://dev.to/shinjithdev/git-good-best-practices-for-branch-naming-and-commit-messages-oj4">Link 1</a> / <a href="https://medium.com/%40shinjithkanhangad/git-good-best-practices-for-branch-naming-and-commit-messages-a903b9f08d68">Link 2</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Commit-Typ</th>
+                <th>Bedeutung</th>
+                <th>Wann verwenden?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>feat</code></td>
+                <td>Funktionale Neuerungen</td>
+                <td>Verwende diesen Commit-Typ, wenn neue Features hinzugefügt werden, wie z.B. das Hinzufügen von
+                    Funktionen für die Navigation von Bildern oder den Vollbildmodus.</td>
+            </tr>
+            <tr>
+                <td><code>fix</code></td>
+                <td>Fehlerbehebungen</td>
+                <td>Nutze diesen Typ für Bugfixes, wie z.B. das Beheben von Problemen mit der Skalierung von Bildern auf
+                    mobilen Geräten oder das Lösen von Flickern beim Laden von Bildern.</td>
+            </tr>
+            <tr>
+                <td><code>style</code></td>
+                <td>Visuelle Anpassungen</td>
+                <td>Verwende <code>style</code>, wenn du nur das Design änderst, wie z.B. das Verbessern der
+                    Hover-Effekte oder das Aktualisieren der Farbgebung für besseren Kontrast.</td>
+            </tr>
+            <tr>
+                <td><code>docs</code></td>
+                <td>Dokumentation</td>
+                <td>Verwende diesen Commit-Typ, wenn du Änderungen an der Dokumentation vornimmst, z.B. das Hinzufügen
+                    von Features oder die Aktualisierung des README mit Installationsschritten.</td>
+            </tr>
+            <tr>
+                <td><code>build</code></td>
+                <td>Änderungen an Build-Prozessen</td>
+                <td>Dieser Commit-Typ wird für Änderungen am Build-Prozess oder an Abhängigkeiten verwendet, z.B. beim
+                    Aktualisieren der Abhängigkeiten für bessere Performance.</td>
+            </tr>
+            <tr>
+                <td><code>refactor</code></td>
+                <td>Code-Refactoring</td>
+                <td>Verwende <code>refactor</code> für Änderungen am Code, die keine funktionalen Änderungen bewirken,
+                    wie z.B. das Optimieren der Logik für das Vorladen von Bildern oder das Bereinigen von CSS-Klassen.
+                </td>
+            </tr>
+            <tr>
+                <td><code>test</code></td>
+                <td>Fügt Tests hinzu oder aktualisiert bestehende Tests</td>
+                <td>Wird verwendet, wenn neue Tests für Funktionen hinzugefügt oder bestehende Tests angepasst werden.</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1>GitHub Keywords für Issues</h1>
+    <p>Hier eine kleine Übersicht, wann man welches Keyword verwenden sollte:</p>
+    Info:<a href="https://github.com/orgs/community/discussions/147722"> https://github.com/orgs/community/discussions/147722</a> 
+    <table>
+        <thead>
+            <tr>
+                <th>Keyword</th>
+                <th>Bedeutung</th>
+                <th>Wann verwenden?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>Closes #1</code></td>
+                <td>Schließt das Issue endgültig</td>
+                <td>Allgemein empfohlen für alle abgeschlossenen Issues</td>
+            </tr>
+            <tr>
+                <td><code>Fixes #1</code></td>
+                <td>Zeigt, dass ein Bug behoben wurde</td>
+                <td>Nur für Bugfixes geeignet</td>
+            </tr>
+            <tr>
+                <td><code>Resolves #1</code></td>
+                <td>Zeigt, dass das Problem gelöst ist</td>
+                <td>Kann für alle Issues verwendet werden, nicht nur Bugs</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note">
+        <p>Hinweis: Die Verwendung dieser Keywords hilft, Issues automatisch zu schließen und die Historie sauber zu
+            halten.</p>
+    </div>
+    <hr>
+    <h1>Was ist Semantic Versioning (SemVer)?</h1>
+    <h2><a href="https://semver.org/">Semantic Versioning 2.0.0</a></h2>
+
+    <p>Semantic Versioning (SemVer) verwendet ein drei-stufiges Versionssystem:</p>
+    <p><strong>MAJOR.MINOR.PATCH → 1.0.0</strong></p>
+
+    <h2>Versionstypen</h2>
+    <ul>
+        <li><strong>MAJOR (1.x.x)</strong> → Große Änderungen, die inkompatibel sind (Breaking Changes)</li>
+        <li><strong>MINOR (x.1.x)</strong> → Neue Features, aber abwärtskompatibel</li>
+        <li><strong>PATCH (x.x.1)</strong> → Kleine Bugfixes, keine neuen Features</li>
+    </ul>
+    <p>Würde man nur mit 1, 2, 3 arbeiten, wäre es schwer zu erkennen, ob es sich um einen kleinen Bugfix oder ein
+        großes Update handelt.</p>
+
+    <h2>Wie geht man vor?</h2>
+    <div class="step">
+        <h3>Schritt 1: Die erste stabile Version veröffentlichen</h3>
+        <p>Version beginnt bei <code>1.0.0</code> → Die erste richtige, stabile Version.</p>
+        <p>Vorher gibt es eventuell Alpha/Beta-Versionen → <code>0.x.x</code> oder <code>1.0.0-beta</code></p>
+    </div>
+    <div class="step">
+        <h3>Schritt 2: Kleinere Features und Bugfixes einfügen</h3>
+        <ul>
+            <li><code>1.0.1</code> → Kleiner Bugfix (z. B. ein Fix für falsche Bildgrößen)</li>
+            <li><code>1.1.0</code> → Neues Feature, aber keine Breaking Changes (z. B. Slideshow hinzugefügt)</li>
+        </ul>
+    </div>
+    <div class="step">
+        <h3>Schritt 3: Große Änderungen machen</h3>
+        <p>Wenn sich die API oder Funktionen stark ändern und alte Dinge nicht mehr funktionieren → <code>2.0.0</code>
+        </p>
+    </div>
+
+    <h2>Beispiel: Fotogalerie Versionierung</h2>
+    <div class="example">
+        <h3>1.0.0 → Erste stabile Version</h3>
+        <p>Die erste stabile Version der Fotogalerie, mit grundlegenden Funktionen.</p>
+    </div>
+    <div class="example">
+        <h3>1.0.1 → Kleiner Bugfix</h3>
+        <p>Ein Bugfix, z. B. ein Fix für falsche Bildgrößen.</p>
+    </div>
+    <div class="example">
+        <h3>1.1.0 → Neues Feature</h3>
+        <p>Ein neues Feature wird hinzugefügt, z. B. eine Slideshow.</p>
+    </div>
+    <div class="example">
+        <h3>2.0.0 → Große Änderung</h3>
+        <p>Eine große Änderung, z. B. eine komplette Umstellung auf ein neues Framework.</p>
+    </div>
+</body>
+
+</html>
